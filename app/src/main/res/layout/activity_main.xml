@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="est.booth.com.booth.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimar"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <EditText
+            android:id="@+id/et_bin_A"
+            android:layout_width="60pt"
+            android:layout_height="40dp"
+            android:layout_alignEnd="@+id/et_dec_B"
+            android:layout_toEndOf="@+id/textView7"
+            android:background="@drawable/shape_texte"
+            android:digits="10"
+            android:ems="10"
+            android:hint="binary"
+            android:inputType="number"
+            android:maxWidth="60dp"
+            android:minWidth="60dp"
+            android:padding="5dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/colorbyed"
+            android:textColorHint="@color/colorbyedhint" />
+
+        <EditText
+            android:id="@+id/et_dec_A"
+            android:layout_width="60pt"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/textView6"
+            android:layout_alignEnd="@+id/et_bin_A"
+            android:layout_alignStart="@+id/et_bin_A"
+            android:background="@drawable/shape_texte"
+            android:ems="10"
+            android:hint="dicimal"
+            android:inputType="numberSigned"
+            android:maxWidth="60dp"
+            android:minWidth="60dp"
+            android:padding="5dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/colorbyed"
+            android:textColorHint="@color/colorbyedhint"
+            android:visibility="invisible" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:rotation="90"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:checked="false"
+            android:onClick="switch_clk"
+            android:thumbTint="@color/colororange"
+            android:trackTint="@color/colorbyed" />
+
+        <EditText
+            android:id="@+id/et_bin_B"
+            android:layout_width="60pt"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/textView7"
+            android:layout_toEndOf="@+id/textView7"
+            android:layout_toStartOf="@+id/switch1"
+            android:background="@drawable/shape_texte"
+            android:digits="10"
+            android:hint="binary"
+            android:inputType="number"
+            android:maxWidth="60dp"
+            android:minWidth="60dp"
+            android:selectAllOnFocus="true"
+            android:textAlignment="center"
+            android:textColor="@color/colorbyed"
+            android:textColorHint="@color/colorbyedhint" />
+
+        <EditText
+            android:id="@+id/et_dec_B"
+            android:layout_width="60pt"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/textView7"
+            android:layout_toStartOf="@+id/switch1"
+            android:background="@drawable/shape_texte"
+            android:hint="decimal"
+            android:inputType="numberSigned"
+            android:maxWidth="60dp"
+            android:minWidth="60dp"
+            android:selectAllOnFocus="true"
+            android:textAlignment="center"
+            android:textColor="@color/colorbyed"
+            android:textColorHint="@color/colorbyedhint"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/et_bin_A"
+            android:text="A"
+            android:textColor="@color/colorbyed"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="B"
+            android:textColor="@color/colorbyed"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="100dp">
+
+        <com.hitomi.cmlibrary.CircleMenu
+            android:id="@+id/circle_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            tools:ignore="MissingConstraints" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
